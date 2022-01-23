@@ -2,6 +2,7 @@ import express from "express";
 import morgan from "morgan";
 const app = express();
 
+app.use(express.static("build"));
 app.use(express.json());
 
 morgan.token("post", function (req) {
