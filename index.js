@@ -1,8 +1,10 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 const app = express();
 
 app.use(express.static("build"));
+app.use(cors());
 app.use(express.json());
 
 morgan.token("post", function (req) {
